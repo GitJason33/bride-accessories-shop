@@ -1,0 +1,65 @@
+/* common style for all categories */
+
+.catImg{
+   height: 330px;
+}
+@media screen and (max-width: 759px){
+   .catImg{
+      height: fit-content;
+   }
+}
+.containInfo{
+   display: grid;
+   grid-template-columns: auto 30%;
+}
+.catImg img{
+   height: 240px !important;
+}
+.catImg img:hover{
+   transform: none !important;
+   cursor: pointer;
+   filter: brightness(90%);
+}
+.containInfo div:first-child{
+   text-align: left;
+}
+.catImg span{
+   font: bold 18px "Times New Roman", serif;
+}
+.containInfo div button{
+   display: block;
+   width: 100%;
+   height: 42px;
+   font: bold 20px 'courier New', Courier, monospace;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   border: 2px outset black !important;
+}
+.containInfo div button:hover{
+   color: darkred;
+   border-color: darkred !important;
+}
+@media screen and (max-width: 350px){
+   .containInfo div button{
+      font: bold 13px serif;
+   }
+}
+button div#catDropdown-content{
+   transform: translateX(-6px) !important;
+   font-size: 16px;
+}
+@media screen and (max-width: 308px){
+   button div#catDropdown-content{
+      font-size: 13px;
+   }
+   button div#catDropdown-content a{
+      font-size: 12px !important;
+   }
+}
+button div#catDropdown-content a{
+   font-size: 14px;
+}
+h2{
+   margin-top: 0;
+   text-align: center;
+}
