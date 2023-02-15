@@ -1,0 +1,470 @@
+/* fix any code breaking margins and paddings */
+*{ box-sizing: border-box; }
+
+.active{
+   background: lightcoral;
+}
+::selection{
+   background: lightcoral;
+}
+body{
+   margin: 0;
+   font-family: Arial, Verdana, sans-serif;
+}
+
+/*------- Upper Header -------*/
+#miniHeader{
+   background-color: rgb(246, 246, 248);
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: space-between;
+   column-gap: 3vw;
+   font-size: 125%;
+   column-gap: 5px;
+   row-gap: 5px;
+   padding: 5px;
+}
+#leftHeadContain{
+   display: grid;
+   grid-template-columns: auto auto;
+   column-gap: 20px;
+}
+@media screen and (max-width: 700px){
+   #leftHeadContain{
+      grid-template-columns: auto;
+   }
+}
+@media screen and (max-width: 470px){
+   #miniHeader{
+      font-size: 100%;
+   }
+}
+@media screen and (max-width: 370px){
+   #leftHeadContain section a span{
+      display: none;
+   }
+   #leftHeadContain{
+      grid-template-columns: auto auto;
+   }
+}
+.infoButton a{
+   text-decoration: none;
+   color: black;
+}
+.infoButton a:hover{
+   color: darkred;
+   cursor: pointer;
+}
+/*------- Upper Header End -------*/
+
+/*------- Sticky Header -------*/
+#stickyHeader{
+   /* sticky on top */
+   position: sticky;
+   top: 0;
+   padding: 1vw;
+   border-bottom: 1px solid gray;
+   box-shadow: 0 1px 3px gray;
+   /* no gradient support? */
+   background: lightgray;
+   z-index: 2;
+
+   background: linear-gradient(to bottom right, rgb(235, 235, 235), rgb(168, 168, 168));
+   
+   /* grid system */
+   display: grid;
+   grid-template-columns: auto 50%;
+   justify-content: space-between;
+   align-items: center;
+}
+#logo{
+   width: 150px;
+   height: 85px;
+}
+#infosSection div a{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+   display: block;
+   width: 100%;
+   text-align: center;
+}
+#infosSection div a:hover, #catDropdown:hover, i[class*='fa-']:hover{
+   color: darkred !important;
+}
+#infosSection{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   justify-content: space-evenly;
+   row-gap: 15px;
+}
+#infosSection div{
+   border: 1px inset rgb(88, 88, 88);
+   border-radius: 0.5rem;
+   padding: 10px;
+}
+@media screen and (max-width: 760px){
+   #stickyHeader{
+      grid-template-columns: auto 75%;
+   }
+}
+@media screen and (max-width: 510px){
+   #stickyHeader{
+      display: block;
+   }
+   #infosSection{
+      padding: 0;
+      justify-content: space-between;
+   }
+}
+@media screen and (max-width: 378px){
+   #infosSection{
+      font-size: 80%;
+   }
+   #logo{
+      width: 120px;
+      height: 70px;
+   }
+}
+@media screen and (max-width: 318px){
+   #infosSection{
+      font-size: 60%;
+   }
+}
+@media screen and (max-width: 258px){
+   #infosSection{
+      font-size: 45%;
+   }
+}
+
+/*-------- dropdown menu for categories and language --------*/
+#catDropdown, #catDropdownLan{
+   display: block;
+   position: relative;
+   border: 0;
+   margin: 0;
+   cursor: pointer;
+   font-weight: bold;
+   text-align: center;
+}
+#catDropdown:hover #catDropdown-content, #catDropdownLan:hover #catDropdownLan-content{
+   display: block;
+}
+#catDropdownLan-content, #catDropdown-content{
+   margin: auto;
+   position: absolute;
+   z-index: 5;
+   display: none;
+   margin: 0;
+   transform: translateX(-10px);
+   width: 100%;
+   background: whitesmoke;
+} 
+#catDropdown-content a, #catDropdownLan-content a{
+   display: block;
+   width: 100%;
+   padding: 5px;
+   text-align: center;
+   text-decoration: none;
+   color: black;
+   border-bottom: 1px dotted lightgray;
+}
+#catDropdown-content a:hover, #catDropdownLan-content a:hover {
+   background: lightgray;
+}
+#catDropdown-content a:last-child, #catDropdownLan-content a:last-child{
+   border-bottom: 0;
+}
+/*------- End dropdown menu --------*/
+/*------- Sticky Header End -------*/
+
+/*------- Image Slider -------*/
+.sliderButtons{
+   width: 50px;
+   transform: translateY(-40px);
+   z-index: 1;
+   border-radius: 1em;
+   border-style: none;
+   height: 8px;
+   margin-right: 1%;
+   cursor: pointer;
+   transition: background-color 250ms;
+   background-color: white;
+}
+.b{
+   display: grid;
+   justify-content: center;
+   margin: auto;
+}
+.b img{
+   width: 500px;
+   height: 450px;
+}
+.activeBut{
+   background-color: darkred;
+}
+@media screen and (max-width: 530px){
+   .b img{
+      width: 90vw;
+      height: 85vw;
+   }
+   .sliderButtons{
+      width: 35px;
+   }
+}
+@media screen and (max-width: 332px){
+   .b img{
+      width: 90vw;
+      height: 95vw;
+   }
+}
+@media screen and (max-width: 273px){
+   .sliderButtons{
+      width: 30px;
+   }
+}
+/*------- Image Slider End -------*/
+
+/*------- Catalog Title -------*/
+#catalogTitle{
+   display: grid;
+   grid-template-columns: 25% 50% 25%;
+   column-gap: 0;
+   align-items: center;
+}
+#catalogTitle h1{
+   text-align: center;
+   font-size: 300%;
+   font-family: Audiowide, Karla, sans-serif; 
+}
+#catalogTitle hr{
+   width: 50%;
+   height: 5%;
+   background: black;
+   border-radius: 1rem;
+}
+@media screen and (max-width: 890px){
+   #catalogTitle h1{
+      font-size: 200%;
+   }
+}
+@media screen and (max-width: 597px){
+   #catalogTitle{
+      grid-template-columns: auto;
+   }
+   #catalogTitle hr{
+      display: none;
+   }
+}
+@media screen and (max-width: 328px){
+   #catalogTitle h1{
+      font-size: 170%;
+   }
+}
+/*------- Catalog Title End -------*/
+
+/*------- Product Catalog -------*/
+.proCatalog{
+   display: grid;
+   gap: 2vw 2vw;
+   grid-template-columns: auto auto auto;
+   justify-content: space-evenly;
+}
+.catImg{
+   width: 300px;
+   height: 300px;
+   transition: transform 500ms;
+   padding: 10px;
+   box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19);
+   text-align: center;
+}
+.catImg a{
+   text-decoration: none;
+   color: black
+}
+.catImg a span{
+   font: bold 20px "Times New Roman", serif;
+}
+.catImg a img{
+   width: 100%;
+   height: 90%;
+   transition: transform 500ms;
+}
+.catImg img:hover{
+   transform: rotate(-10deg);
+}
+@media screen and (max-width: 400px){
+   .proCatalog{
+      gap: 15px;
+   }
+   .catImg{
+      width: 90%;
+      height: fit-content;
+      margin: auto;
+   }
+}
+@media screen and (max-width: 1030px){
+   .proCatalog{ grid-template-columns: auto auto; }
+}
+@media screen and (max-width: 759px){
+   .proCatalog{ grid-template-columns: auto; }
+}
+/*------- Product Catalog End -------*/
+
+/*------- paypal button -------*/
+#checkPay{
+   display: block;
+   border-radius: 2rem;
+   margin: 35px 0 30px;
+   width: 100%;
+   font: italic bold 40px Karla, sans-serif;
+   cursor: pointer;
+   border: 3px outset black;
+   transition: color .25s, border-color .25s;
+   background: lightgray;
+
+}
+#checkPay:hover{
+   color: darkblue;
+   border-color: darkblue;
+}
+@media screen and (max-width: 383px){
+   #checkPay{
+      font-size: 25px;
+   }
+}
+/*------- paypal button End -------*/
+
+/*------ buttons design ------*/
+.prevNext{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   align-items: center;
+   column-gap: 10px;
+   justify-content: center;
+   margin-top: 30px;
+}
+.buttons button, #pageNum span{
+   font-size: 24px;
+}
+.buttons button{
+   border: 2px outset black;
+   cursor: pointer;
+   border-radius: 0.5rem;
+   background-color: lightgray;
+   box-shadow: 0 4px #999;
+
+}
+.buttons button:hover{
+   border-color: darkred;
+   color: darkred;
+}
+.buttons button:active{
+   transform: translateY(3px);
+   box-shadow: 0 2px #666;
+}
+/*------ buttons design end ------*/
+
+/*------- Footer -------*/
+footer{
+   background: lightgray;
+   background: linear-gradient(to top bottom right, white, rgb(99, 97, 97));
+   padding: 2%;
+   box-shadow: 0 -1px 3px gray;
+   margin-top: 5%;
+   position: relative;
+   bottom: 0;
+}
+footer #footContain{
+   display: grid;
+   grid-template-columns: 20% 40%;
+   justify-content: center;
+}
+footer a{
+   text-decoration: none;
+   color: black;
+}
+#footInfo{
+   border-left: 1px solid black;
+}
+#footImg{
+   display: grid;
+   align-items: center;
+}
+#footImg img{
+   height: 12vw;
+   width: 100%;
+}
+@media screen and (max-width: 795px){
+   footer #footContain{
+      grid-template-columns: 25% auto;
+   }
+   #footImg img{
+      height: 15vw;
+      width: 100%;
+   }
+}
+@media screen and (max-width: 560px){
+   footer #footContain{
+      grid-template-columns: auto auto;
+   }
+   #footImg img{
+      height: 20vw;
+      width: 100%;
+   }
+}
+@media screen and (max-width: 450px){
+   footer #footContain{
+      grid-template-columns: auto auto;
+   }
+   #footImg img{
+      height: 20vw;
+      width: 30vw;
+   }
+   #footInfo section{
+      font-size: 12px;
+   }
+}
+@media screen and (max-width: 375px){
+   #footInfo section:first-child span{
+      font-size: 18px;
+   }
+   #footInfo section{
+      font-size: 10px;
+   }
+}
+@media screen and (max-width: 300px){
+   #footInfo section:first-child span{
+      font-size: 15px;
+   }
+}
+@media screen and (max-width: 253px){
+   #footInfo section:first-child span{
+      font-size: 13px;
+   }
+}
+#footInfo section:first-child{
+   font-size: 24px;
+   border-bottom: 1px solid black;
+}
+#footInfo section span{
+   font-weight: bold;
+   color: black;
+}
+#footInfo section{
+   padding: 10px;
+   width: fit-content;
+}
+#footInfo section:last-child{
+   border-top: 1px solid black;
+}
+#footInfo i{
+   font-size: 24px;
+   cursor: pointer;
+   padding-right: 5px;
+}
+#footInfo article{
+   padding-bottom: 5px;
+}
+/*------- Footer End-------*/
+
