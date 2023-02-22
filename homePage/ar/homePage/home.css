@@ -1,6 +1,20 @@
 /* fix any code breaking margins and paddings */
 *{ box-sizing: border-box; }
 
+/*------------- video -------------*/
+video{
+   max-width: 75%;
+   height: auto;
+   display: block;
+   margin: auto;
+}
+@media screen and (max-width: 992px){
+   video{
+      max-width: 100%;
+   }
+}
+/*------------- video end -------------*/
+
 .active{
    background: lightcoral;
 }
