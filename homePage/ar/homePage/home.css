@@ -169,10 +169,10 @@ body{
    z-index: 5;
    display: none;
    margin: 0;
-   transform: translateX(-10px);
    width: 100%;
    background: whitesmoke;
 } 
+#catDropdown-content{ transform: translateX(-10px); }
 #catDropdown-content a, #catDropdownLan-content a{
    display: block;
    width: 100%;
