@@ -24,26 +24,8 @@ function createUpHeader() {
   let upHead = document.querySelector("#miniHeader");
   upHead.innerHTML =
     '<article id="leftHeadContain">\
-      <section class="infoButton">\
-         <a href="mailto:' +
-    email +
-    '">\
-            <i class="fa-solid fa-envelope"></i>\
-            <span>' +
-    email +
-    '</span>\
-         </a>\
-      </section>\
-      <section class="infoButton">\
-         <a href="' +
-    whatsapp +
-    '">\
-            <i class="fa-brands fa-square-whatsapp"></i>\
-            <span>+961 81 31 88 32</span>\
-         </a>\
-      </section>\
-   </article>\
-   <div id="catDropdownLan">\
+    </article>\
+    <div id="catDropdownLan">\
       <span>Language - اللغة</span>\
       <i class="fa-solid fa-chevron-down"></i>\
       <section id="catDropdownLan-content">\
@@ -156,7 +138,7 @@ function createHeader() {
     "'>أساور</a>" +
     "<a href='" +
     links[12] +
-    "'>Rita Mode</a>" +
+    "'>Rita style</a>" +
     "</section>" +
     "</div>" +
     "</section></section>";
@@ -191,15 +173,11 @@ function createFooter() {
     whatsapp +
     '">+961 81 31 88 32</a></td>' +
     "</tr>" +
-    "<tr>" +
-    "<td><span>F. </span></td>" +
-    '<td><a href="tel:+96109238225">+961 09 23 82 25</a></td>' +
-    "</tr>" +
     "</table>" +
     "</section>" +
     "<section>" +
     "<article>" +
-    "P.O.Box: email(" +
+    "email(" +
     '<a href="mailto:' +
     email +
     '">' +
