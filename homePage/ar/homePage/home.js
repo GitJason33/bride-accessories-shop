@@ -149,53 +149,31 @@ function createHeader() {
 function createFooter() {
   let links = checkLink();
   let inner =
-    '<div id="footContain">' +
-    '<div id="footImg">' +
-    '<img src="' +
-    links[0] +
-    '" alt="lines group logo"/>' +
-    "</div>" +
-    '<div id="footInfo">' +
-    "<section>" +
-    "<span>سوزان قبرصلي</span><br/>" +
-    '<span style="font-size: 20px">المديرة التنفيزية</span>' +
-    "</section>" +
-    "<section>" +
-    "لبنان<br/>" +
-    "<table>" +
-    "<tr>" +
-    "<td><span>T. </span></td>" +
-    '<td><a href="tel:+96129239123">+961 29 23 91 23</a><br/></td>' +
-    "</tr>" +
-    "<tr>" +
-    "<td><span>W. </span></td>" +
-    '<td><a href="' +
-    whatsapp +
-    '">+961 81 31 88 32</a></td>' +
-    "</tr>" +
-    "</table>" +
-    "</section>" +
-    "<section>" +
-    "<article>" +
-    "email(" +
-    '<a href="mailto:' +
-    email +
-    '">' +
-    "<span>" +
-    email +
-    "</span>" +
-    "</a>)" +
-    "</article>" +
-    "<a>" +
-    '<i class="fa-brands fa-square-facebook"></i>' +
-    "</a>" +
-    '<a href="' +
-    instagram +
-    '">' +
-    '<i class="fa-brands fa-instagram"></i>' +
-    "</a>" +
-    "</section>" +
-    "</div></div>";
+  '<div id="footImg">\
+    <img src="'+ links[0]+'" alt="lines group logo"/>\
+  </div>\
+  <div id="footInfo">\
+    <div id="loc">founded in <span>Lebanon</span></div>\
+    <div>all rights reserved &copy;</div>\
+    <table>\
+      <tr>\
+        <td><i class="fa-solid fa-phone"></i></td>\
+        <td><a href="tel:+96129239123">+961 29 23 91 23</a><br/></td>\
+      </tr>\
+      <tr>\
+        <td><i class="fa-brands fa-whatsapp"></i></td>\
+        <td><a href="' + whatsapp + '">+961 81 31 88 32</a><br/></td>\
+      </tr>\
+      <tr>\
+        <td><i class="fa-regular fa-envelope"></i></td>\
+        <td><a href="mailto:' + email + '">info@lines-group.co.uk</a><br/></td>\
+      </tr>\
+      <tr>\
+        <td><i class="fa-brands fa-instagram"></i></td>\
+        <td><a href="' + instagram + '">lines._group</a><br/></td>\
+      </tr>\
+    </table>\
+  </div>';
   footer.innerHTML = inner;
 }
 
