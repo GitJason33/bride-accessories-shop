@@ -28,20 +28,20 @@ body{
 
 /*------- Upper Header -------*/
 #miniHeader{
-   background-color: rgb(246, 246, 248);
-   display: grid;
-   grid-template-columns: auto auto;
-   justify-content: space-between;
-   column-gap: 3vw;
-   font-size: 125%;
-   column-gap: 5px;
-   row-gap: 5px;
-   padding: 5px;
+  background-color: rgb(246, 246, 248);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  column-gap: 3vw;
+  font-size: 125%;
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 5px;
 }
 #leftHeadContain{
-   display: grid;
-   grid-template-columns: auto auto;
-   column-gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
 }
 @media screen and (max-width: 700px){
    #leftHeadContain{
@@ -383,103 +383,53 @@ body{
 /*------- Footer -------*/
 footer{
    background: lightgray;
-   background: linear-gradient(to top bottom right, white, rgb(99, 97, 97));
-   padding: 2%;
+   background: linear-gradient(to bottom right, rgb(235, 235, 235), rgb(168, 168, 168));
+   padding: 10px;
    box-shadow: 0 -1px 3px gray;
-   margin-top: 5%;
-   position: relative;
-   bottom: 0;
-}
-footer #footContain{
-   display: grid;
-   grid-template-columns: 20% 40%;
-   justify-content: center;
-}
-footer a{
+   margin-top: 25px;
+
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   font: bold 20px sans-serif;
+ }
+ @media screen and (max-width: 517px){
+   footer{
+     justify-content: center;
+     text-align: center;
+   }
+ }
+ @media screen and (max-width: 302px){
+   footer{
+     font-size: 16px;
+   }
+ }
+ @media screen and (max-width: 255px){
+   footer{
+     font-size: 13px;
+   }
+   #footImg img{
+     max-width: 100% !important;
+   }
+ }
+ #footImg img{
+   max-width: 230px;
+   height: auto;
+ }
+ #footInfo a{
    text-decoration: none;
    color: black;
-}
-#footInfo{
-   border-left: 1px solid black;
-}
-#footImg{
-   display: grid;
-   align-items: center;
-}
-#footImg img{
-   height: 12vw;
-   width: 100%;
-}
-@media screen and (max-width: 795px){
-   footer #footContain{
-      grid-template-columns: 25% auto;
-   }
-   #footImg img{
-      height: 15vw;
-      width: 100%;
-   }
-}
-@media screen and (max-width: 560px){
-   footer #footContain{
-      grid-template-columns: auto auto;
-   }
-   #footImg img{
-      height: 20vw;
-      width: 100%;
-   }
-}
-@media screen and (max-width: 450px){
-   footer #footContain{
-      grid-template-columns: auto auto;
-   }
-   #footImg img{
-      height: 20vw;
-      width: 30vw;
-   }
-   #footInfo section{
-      font-size: 12px;
-   }
-}
-@media screen and (max-width: 375px){
-   #footInfo section:first-child span{
-      font-size: 18px;
-   }
-   #footInfo section{
-      font-size: 10px;
-   }
-}
-@media screen and (max-width: 300px){
-   #footInfo section:first-child span{
-      font-size: 15px;
-   }
-}
-@media screen and (max-width: 253px){
-   #footInfo section:first-child span{
-      font-size: 13px;
-   }
-}
-#footInfo section:first-child{
-   font-size: 24px;
-   border-bottom: 1px solid black;
-}
-#footInfo section span{
-   font-weight: bold;
-   color: black;
-}
-#footInfo section{
-   padding: 10px;
-   width: fit-content;
-}
-#footInfo section:last-child{
-   border-top: 1px solid black;
-}
-#footInfo i{
-   font-size: 24px;
+ }
+ #footInfo tr:hover, #footInfo a:hover{
+   color: darkred;
    cursor: pointer;
-   padding-right: 5px;
-}
-#footInfo article{
-   padding-bottom: 5px;
-}
+ }
+ #loc span{
+   color: red;
+   text-decoration: underline green;
+ }
+ #footInfo table tr{
+   padding: 20px 0;
+ }
 /*------- Footer End-------*/
 
