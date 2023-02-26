@@ -9,3 +9,5 @@
 
 # I made many mistakes on the go, including a horrible folder/files organization, then I fixed it all, learning quality lessons from them.
 # horrifying enough, my first time working on an actual server called plesk, messed up then my senior developer friend saved me 😂
+
+#link to the site: https://gitjason33.github.io/bride-accessories-shop/en/home.html
