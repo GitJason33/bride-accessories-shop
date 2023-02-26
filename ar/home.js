@@ -37,11 +37,15 @@ const links_v1 = [ // home version
   "./categories/haircombs/haircombs.html",
   "./categories/glasses/toastglass.html",
   "./categories/bracelets/bracelets.html",
-  "./categories/rita-menu/rita.html",
+  "./categories/rita-crowns/cr-rita 1.html",
+  "./categories/rita-combs/co-rita 1.html",
 
   // javscript & css links from home
   "./home.css",
   "./home.js",
+
+  // rita menu
+  "./categories/rita-menu/rita.html",
 
   // language
   "../en/home.html"
@@ -66,11 +70,15 @@ const links_v2 = [ // categories version
   "../haircombs/haircombs.html",
   "../glasses/toastglass.html",
   "../bracelets/bracelets.html",
-  "../rita-menu/rita.html",
+  "../rita-crowns/cr-rita 1.html",
+  "../rita-combs/co-rita 1.html",
 
   // javscript & css links from home
   "../../home.css",
   "../../home.js",
+  
+  // rita menu
+  "../rita-menu/rita.html",
 
   // language
   "../../../en/home.html"
@@ -163,7 +171,7 @@ function createNavBar() {
     links[11] +
     "'>أساور</a>" +
     "<a href='" +
-    links[12] +
+    links[links.length - 2] +
     "'>Rita style</a>" +
     "</section>" +
     "</div>" +
@@ -309,8 +317,8 @@ const catalogLabels = [
   "أمشاط شعر",
   "أساور",
   "كؤوس نخب",
+  "Rita-Crowns",
   "Rita-Combs",
-  "Rita-Crowns"
 ];
 
 const createCatalog = (label, link, image)=> {
