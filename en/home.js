@@ -37,11 +37,15 @@ const links_v1 = [ // home version
   "./categories/haircombs/haircombs.html",
   "./categories/glasses/toastglass.html",
   "./categories/bracelets/bracelets.html",
-  "./categories/rita-menu/rita.html",
+  "./categories/rita-crowns/cr-rita 1.html",
+  "./categories/rita-combs/co-rita 1.html",
 
   // javscript & css links from home
   "./home.css",
   "./home.js",
+
+  // rita menu
+  "./categories/rita-menu/rita.html",
 
   // language
   "../ar/home.html"
@@ -66,11 +70,15 @@ const links_v2 = [ // categories version
   "../haircombs/haircombs.html",
   "../glasses/toastglass.html",
   "../bracelets/bracelets.html",
-  "../rita-menu/rita.html",
+  "../rita-crowns/cr-rita 1.html",
+  "../rita-combs/co-rita 1.html",
 
   // javscript & css links from home
   "../../home.css",
   "../../home.js",
+  
+  // rita menu
+  "../rita-menu/rita.html",
 
   // language
   "../../../ar/home.html"
@@ -149,7 +157,7 @@ function createNavBar() {
         "<a href='" + links[9] + "'>Hair Combs</a>" +
         "<a href='" + links[10] + "'>Toasting Glasses</a>" +
         "<a href='" + links[11] + "'>Bracelets</a>" +
-        "<a href='" + links[12] + "'>Rita Style</a>" +
+        "<a href='" + links[links.length - 2] + "'>Rita Style</a>" +
       "</section>" +
     "</div>" +
 
@@ -297,8 +305,8 @@ const catalogLabels = [
   "Haircombs",
   "Bracelets",
   "Toasting-Glasses",
-  "Rita-Combs",
-  "Rita-Crowns"
+  "Rita-Crowns",
+  "Rita-Combs"
 ]
 const createCatalog = (label, link, image)=> {
   const catalog = document.querySelector(".proCatalog");
