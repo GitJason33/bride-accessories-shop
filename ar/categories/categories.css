@@ -1,0 +1,67 @@
+/* common style for all categories */
+h2{
+   margin-top: 0;
+   text-align: center;
+ }
+ 
+ .catImg{
+   height: 330px !important;
+ }
+ @media screen and (max-width: 759px){
+   .catImg{
+     height: fit-content;
+   }
+ }
+ .containInfo{
+   display: grid;
+   grid-template-columns: auto 35%;
+ }
+ .catImg img{
+   height: 240px !important;
+ }
+ .catImg img:hover{
+   transform: none !important;
+   cursor: pointer;
+   filter: brightness(90%);
+ }
+ .containInfo .left{
+   text-align: left;
+ }
+ .catImg .left{
+   font: bold 18px "Times New Roman", serif;
+ }
+ /*----------- buy button -----------*/ 
+ span ~ div#catDropdown-content{
+   font-size: 16px;
+ }
+ span ~ div#catDropdown-content a{
+   font-size: 14px;
+ }
+ @media screen and (max-width: 308px){
+   span ~ div#catDropdown-content{
+     font-size: 13px;
+   }
+   span ~ div#catDropdown-content a{
+     font-size: 12px !important;
+   }
+ }
+ .buy span{
+   display: block;
+   width: 100%;
+   padding: 8px 12px;
+   font: bold 16px 'courier New', Courier, monospace;
+   border-radius: 5px;
+   cursor: pointer;
+   border: 2px outset black !important;
+ }
+ .buy span:hover{
+   color: darkred;
+   border-color: darkred !important;
+ }
+ @media screen and (max-width: 350px){
+   .buy span{
+     font: bold 13px serif;
+   }
+ }
+ /*----------- buy button end -----------*/ 
+ 

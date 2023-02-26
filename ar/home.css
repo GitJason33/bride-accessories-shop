@@ -1,0 +1,413 @@
+/* fix any code breaking margins and paddings */
+*{ box-sizing: border-box; }
+
+/*------------- video -------------*/
+video{
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin: 0 auto 20px;
+
+}
+
+/*------------- video end -------------*/
+
+.active{
+   background: lightcoral;
+}
+::selection{
+   background: lightcoral;
+}
+body{
+   margin: 0;
+   font-family: Arial, Verdana, sans-serif;
+}
+/*------- Upper Header -------*/
+#miniHeader{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgb(243, 243, 243);
+   font-size: 125%;
+   padding: 5px;
+ }
+ #catDropdownLan #dropLabel{
+   padding: 12px;
+   display: block;
+   border-radius: 3px;
+   background-color: rgb(219, 218, 218);
+ }
+ @media screen and (max-width: 446px){
+   #leftHeadContain, div#catDropdownLan{
+     margin-bottom: 20px;
+   } 
+   #miniHeader{
+     justify-content: center;
+   }
+ }
+ @media screen and (max-width: 250px){
+   #leftHeadContain img{
+     max-width: 100% !important;
+   }
+ }
+ #leftHeadContain img{
+   max-width: 230px;
+   height: auto;
+ }
+ 
+ /*------- Upper Header End -------*/
+
+/*------- navigation bar -------*/
+#stickyHeader{
+   /* sticky on top */
+   position: sticky;
+   top: 0;
+   border-bottom: 1px solid gray;
+   box-shadow: 0 1px 3px gray;
+   /* no gradient support? */
+   background: lightgray;
+   z-index: 5;
+ 
+   background: linear-gradient(to bottom right, rgb(235, 235, 235), rgb(168, 168, 168));
+   
+   /* grid system */
+   display: grid;
+   grid-template-columns: 25% 25% 25% 25%;
+   align-items: center;
+ }
+ @media screen and (max-width: 615px) {
+   #stickyHeader{
+     grid-template-columns: 50% 50%;
+   }
+ }
+ @media screen and (max-width: 325px) {
+   #stickyHeader{
+     grid-template-columns: 100%;
+     position: relative;
+   }
+ }
+ 
+ #stickyHeader div a{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+   display: block;
+   padding: 12px;
+   width: 100%;
+   text-align: center;
+ }
+ /* fix paddings */
+ #stickyHeader #catDropdown a:not(#dropLabel){
+   padding: 5px;
+ }
+ #stickyHeader div a:hover, #catDropdown:hover, i[class*='fa-']:hover, #catDropdownLan a:hover{
+   color: darkred !important;
+ }
+ #stickyHeader div{
+   flex-grow: 1;
+ }
+ @media screen and (max-width: 378px){
+   #infosSection{
+     font-size: 80%;
+   }
+   #logo{
+     width: 120px;
+     height: 70px;
+   }
+ }
+ @media screen and (max-width: 330px){
+    #infosSection{
+       font-size: 60%;
+    }
+ }
+ @media screen and (max-width: 270px){
+    #infosSection{
+       font-size: 45%;
+    }
+ }
+ 
+ /*-------- dropdown menu for categories and language --------*/
+ #catDropdown, #catDropdownLan{
+    display: block;
+    position: relative;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+ }
+ #catDropdown:hover #catDropdown-content,
+ #catDropdownLan:hover #catDropdownLan-content{
+    visibility: visible;
+    opacity: 100%;
+ }
+ #catDropdownLan-content, #catDropdown-content{
+    margin: auto;
+    position: absolute;
+    z-index: 7;
+    visibility: hidden;
+    opacity: 0;
+    transition: 500ms;
+    margin: 0;
+    width: 100%;
+    background: whitesmoke;
+ } 
+ #catDropdown-content a, #catDropdownLan-content a{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px dotted lightgray;
+ }
+ #catDropdown-content a:hover, #catDropdownLan-content a:hover {
+    background: lightgray;
+ }
+ #catDropdown-content a:last-child, #catDropdownLan-content a:last-child{
+    border-bottom: 0;
+ }
+ /*------- End dropdown menu --------*/
+ /*------- navigation bar End -------*/
+
+/*------- Image Slider -------*/
+#slider ~ div{
+   display: flex;
+   justify-content: center;
+}
+.sliderButtons{
+   width: 50px;
+   transform: translateY(-40px);
+   z-index: 1;
+   border-radius: 1em;
+   border-style: none;
+   height: 8px;
+   margin-right: 1%;
+   cursor: pointer;
+   transition: background-color 250ms;
+   background-color: white;
+}
+.b{
+   display: grid;
+   justify-content: center;
+   margin: auto;
+}
+.b img{
+   width: 500px;
+   height: 450px;
+}
+.activeBut{
+   background-color: darkred;
+}
+@media screen and (max-width: 530px){
+   .b img{
+      width: 95%;
+      height: auto;
+      display: block;
+      margin: auto;
+   }
+   .sliderButtons{
+      width: 35px;
+   }
+}
+@media screen and (max-width: 273px){
+   .sliderButtons{
+      width: 30px;
+   }
+}
+/*------- Image Slider End -------*/
+
+/*------- Catalog Title -------*/
+#catalogTitle{
+   display: grid;
+   grid-template-columns: 25% 50% 25%;
+   column-gap: 0;
+   align-items: center;
+}
+#catalogTitle h1{
+   text-align: center;
+   font-size: 300%;
+   font-family: Audiowide, Karla, sans-serif; 
+}
+#catalogTitle hr{
+   width: 50%;
+   height: 5%;
+   background: black;
+   border-radius: 1rem;
+}
+@media screen and (max-width: 890px){
+   #catalogTitle h1{
+      font-size: 200%;
+   }
+}
+@media screen and (max-width: 597px){
+   #catalogTitle{
+      grid-template-columns: auto;
+   }
+   #catalogTitle hr{
+      display: none;
+   }
+}
+@media screen and (max-width: 328px){
+   #catalogTitle h1{
+      font-size: 170%;
+   }
+}
+/*------- Catalog Title End -------*/
+
+/*------- Product Catalog -------*/
+.proCatalog{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   max-width: 100%;
+}
+.catImg{
+   width: 300px;
+   height: 300px;
+   transition: transform 500ms;
+   padding: 10px;
+   margin: 15px;
+   box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19);
+   text-align: center;
+}
+.catImg a{
+   text-decoration: none;
+   color: black
+}
+.catImg a span{
+   font: bold 20px "Times New Roman", serif;
+}
+.catImg a img{
+   width: 100%;
+   height: 90%;
+   transition: transform 500ms;
+}
+.catImg img:hover{
+   transform: rotate(-10deg);
+}
+@media screen and (max-width: 400px){
+   .catImg{
+      max-width: 100%;
+      height: auto;
+      margin: 15px auto;
+   }
+}
+/*------- Product Catalog End -------*/
+
+/*------- paypal button -------*/
+#checkPay{
+   display: block;
+   border-radius: 2rem;
+   margin: 35px 0 30px;
+   width: 100%;
+   font: italic bold 40px Karla, sans-serif;
+   cursor: pointer;
+   border: 3px outset black;
+   transition: color .25s, border-color .25s;
+   background: lightgray;
+
+}
+#checkPay:hover{
+   color: darkblue;
+   border-color: darkblue;
+}
+@media screen and (max-width: 455px){
+   #checkPay{
+      font-size: 25px;
+   }
+}
+@media screen and (max-width: 300px){
+   #checkPay{
+      font-size: 20px;
+   }
+}
+/*------- paypal button End -------*/
+
+/*------ buttons design ------*/
+.pagination{
+   margin-top: 20px;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+ }
+ .pagination a{
+   display: block;
+   padding: 6px 12px;
+   text-decoration: none;
+   color: black;
+   border-radius: 3px;
+   transition: 500ms;
+   font-size: 24px;
+ }
+ .activePage{
+   background: lightcoral;
+ }
+ /* select all links */
+ .pagination a:hover:not(.activePage){
+   background: lightgray;
+   color: darkred;
+ }
+ @media screen and (max-width: 265px){
+   .pagination a{
+     font-size: 16px;
+   }
+ }
+ /*------ buttons design end ------*/
+
+/*------- Footer -------*/
+footer{
+   background: lightgray;
+   background: linear-gradient(to bottom right, rgb(235, 235, 235), rgb(168, 168, 168));
+   padding: 10px;
+   box-shadow: 0 -1px 3px gray;
+   margin-top: 25px;
+
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   font: 20px sans-serif;
+ }
+ #footInfo div{
+   font-weight: bold;
+ }
+ @media screen and (max-width: 517px){
+   footer{
+     justify-content: center;
+   }
+ }
+ @media screen and (max-width: 302px){
+   footer{
+     font-size: 16px;
+   }
+ }
+ @media screen and (max-width: 255px){
+   footer{
+     font-size: 13px;
+   }
+   #footImg img{
+     max-width: 100% !important;
+   }
+ }
+ #footImg img{
+   max-width: 230px;
+   height: auto;
+ }
+ #footInfo a{
+   text-decoration: none;
+   color: black;
+ }
+ #footInfo tr:hover, #footInfo a:hover{
+   color: darkred;
+   cursor: pointer;
+ }
+ #loc span{
+   color: red;
+   text-decoration: underline green;
+ }
+ #footInfo table{
+   padding: 20px 0;
+ }
+/*------- Footer End-------*/
+
