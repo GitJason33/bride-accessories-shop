@@ -40,10 +40,6 @@ const links_v1 = [ // home version
   "./categories/rita-crowns/cr-rita 1.html",
   "./categories/rita-combs/co-rita 1.html",
 
-  // javscript & css links from home
-  "./home.css",
-  "./home.js",
-
   // rita menu
   "./categories/rita-menu/rita.html",
 
@@ -62,8 +58,7 @@ const links_v2 = [ // categories version
   "../../news.html",
   "../../decor-items.html",
 
-  // ../varying/cat.html
-  // categories - to be fixed with a complex function
+  // categories 6 -> 13
   "../crowns/crowns.html",
   "../flowers/flowers.html",
   "../headbands/headbands.html",
@@ -72,10 +67,6 @@ const links_v2 = [ // categories version
   "../bracelets/bracelets.html",
   "../rita-crowns/cr-rita 1.html",
   "../rita-combs/co-rita 1.html",
-
-  // javscript & css links from home
-  "../../home.css",
-  "../../home.js",
   
   // rita menu
   "../rita-menu/rita.html",
@@ -93,6 +84,8 @@ const loading = ()=> {
   createNavBar();
   createFooter();
   checkActive();
+  createCatalogTitles();
+  addFontAwesome();
 }
 const loadHome = ()=> {
   loading();
@@ -117,6 +110,18 @@ const ritaLoad = ()=> {
   createCatalog(labels, link, images);
 }
 
+const libraries = [
+  // font awesome icon library
+  
+];
+const addFontAwesome = ()=> {
+  let head = document.head;
+  let script = document.createElement("script");
+  script.src = "https://kit.fontawesome.com/f1d9d2165a.js";
+  script.crossOrigin = "Anonymous";
+  head.append(script);
+}
+
 // create the upper header
 function createHeader(){
   let links = checkLink();
@@ -124,24 +129,31 @@ function createHeader(){
   upHead.innerHTML =
     '<article id="leftHeadContain">\
     <img src="'+ links[0] +'" alt="logo">\
-    </article>\
-    <div id="catDropdownLan">\
-      <a id="dropLabel">\
-        <i class="fa-solid fa-earth-americas"></i>\
-        Language - اللغة\
-      </a>\
-      <section id="catDropdownLan-content">\
-        <a href="' + links[links.length - 1] + '">العربية</a>\
-        <a href="#">English</a>\
-      </section>\
-    </div>';
+    </article>';
 }
 
 // navigation bar
 function createNavBar() {
   let links = checkLink();
+  let catLabels = [
+    "Tiaras & Crowns", 
+    "Bouquets",
+    "Headbands",
+    "Haircombs",
+    "Toasting Glasses",
+    "Bracelets",
+    "Rita Style"
+  ];
+
+  // category builder 
+  let catInner = "";
+  for(let i1 = 6, i2 = 0; i2 < catLabels.length; i1++, i2++){
+    if(i1 == 12) i1 = links.length-2;
+    catInner += "<a href='" + links[i1] + "'>" + catLabels[i2] + "</a>"
+  }
+  
   let inner =
-    "<div id='home'>" +
+    "<div id='Home'>" +
       "<a href='" + links[1] + "'>HOME</a>" +
     "</div>" +
 
@@ -151,13 +163,7 @@ function createNavBar() {
       <i class='fa-solid fa-chevron-down'></i>" +
       "</a>" +
       "<section id='catDropdown-content'>" +
-        "<a href='" + links[6] + "'>Crowns</a>" +
-        "<a href='" + links[7] + "'>Bouquets</a>" +
-        "<a href='" + links[8] + "'>Headbands</a>" +
-        "<a href='" + links[9] + "'>Hair Combs</a>" +
-        "<a href='" + links[10] + "'>Toasting Glasses</a>" +
-        "<a href='" + links[11] + "'>Bracelets</a>" +
-        "<a href='" + links[links.length - 2] + "'>Rita Style</a>" +
+        catInner +
       "</section>" +
     "</div>" +
 
@@ -215,7 +221,7 @@ const pageClass = [
   "paypal",
 ];
 let TargetId = [
-  "home",
+  "Home",
   "aboutUs",
   "special-off",
   "news",
@@ -307,7 +313,8 @@ const catalogLabels = [
   "Toasting-Glasses",
   "Rita-Crowns",
   "Rita-Combs"
-]
+];
+
 const createCatalog = (label, link, image)=> {
   const catalog = document.querySelector(".proCatalog");
 
@@ -328,4 +335,80 @@ const createCatalog = (label, link, image)=> {
       </a>\
      </article>';
   };
+}
+
+const createCatalogTitles = function() {
+  let title = document.querySelector("#catalogTitle h1");
+  let page1 = document.querySelector("input[id]");
+  let checkLabel = [
+    {
+      prop: "home",
+      val: "Product Catalog"
+    },
+    {
+      prop: "aboutus",
+      val: "About Us"
+    },
+    {
+      prop: "paypal",
+      val: "PayPal"
+    },
+    {
+      prop: "decor",
+      val: "Decor Items"
+    },
+    {
+      prop: "crown",
+      val: "Tiaras & Crowns"
+    },
+    {
+      prop: "flower",
+      val: "Bouquets"
+    },
+    {
+      prop: "headband",
+      val: "Headbands"
+    },
+    {
+      prop: "haircomb",
+      val: "Haircombs"
+    },
+    {
+      prop: "bracelet",
+      val: "Bracelets"
+    },
+    {
+      prop: "glass",
+      val: "Toasting Glasses"
+    },
+    {
+      prop: "rita_crown",
+      val: "Rita Crowns"
+    },
+    {
+      prop: "rita_comb",
+      val: "Rita Combs"
+    },
+    {
+      prop: "rita_menu",
+      val: "Rita Style"
+    },
+    {
+      prop: "news",
+      val: "NEWS"
+    },
+    {
+      prop: "special",
+      val: "Special Offers"
+    }
+  ];
+  let inner;
+
+  for(let i = 0; i < checkLabel.length; i++){
+    if(page1.id == checkLabel[i]['prop']){
+      inner = checkLabel[i]['val'];
+      break;
+    }
+  }
+  title.innerHTML = inner;
 }

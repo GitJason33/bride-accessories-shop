@@ -29,11 +29,11 @@ const links_v1 = [ // home version
   "./categories/haircombs/haircombs.html",
   "./categories/glasses/toastglass.html",
   "./categories/bracelets/bracelets.html",
-  "./categories/rita-menu/rita.html",
+  "./categories/rita-crowns/cr-rita 1.html",
+  "./categories/rita-combs/co-rita 1.html",
 
-  // javscript & css links from home
-  "./home.css",
-  "./home.js",
+  // rita menu
+  "./categories/rita-menu/rita.html",
 
   // language
   "../ar/home.html"
@@ -50,19 +50,18 @@ const links_v2 = [ // categories version
   "../../news.html",
   "../../decor-items.html",
 
-  // ../varying/cat.html
-  // categories - to be fixed with a complex function
+  // categories
   "../crowns/crowns.html",
   "../flowers/flowers.html",
   "../headbands/headbands.html",
   "../haircombs/haircombs.html",
   "../glasses/toastglass.html",
   "../bracelets/bracelets.html",
+  "../rita-crowns/cr-rita 1.html",
+  "../rita-combs/co-rita 1.html",
+  
+  // rita menu
   "../rita-menu/rita.html",
-
-  // javscript & css links from home
-  "../../home.css",
-  "../../home.js",
 
   // language
   "../../../ar/home.html"

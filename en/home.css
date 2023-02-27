@@ -1,5 +1,11 @@
 /* fix any code breaking margins and paddings */
 *{ box-sizing: border-box; }
+:root{
+   --c1: #2AB4C7;
+   --c2: rgb(0, 17, 253);
+   --fontTitle: Roboto, sans-serif;
+   --fontN: Helvetica, sans-serif;
+}
 
 /*------------- video -------------*/
 video{
@@ -13,21 +19,21 @@ video{
 /*------------- video end -------------*/
 
 .active{
-   background: lightcoral;
+   background: var(--c1);
 }
 ::selection{
-   background: lightcoral;
+   background: var(--c1);
 }
 body{
    margin: 0;
-   font-family: Arial, Verdana, sans-serif;
+   font-family: var(--fontN);
 }
 
 /*------- Upper Header -------*/
 #miniHeader{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: rgb(243, 243, 243);
   font-size: 125%;
@@ -53,7 +59,7 @@ body{
   }
 }
 #leftHeadContain img{
-  max-width: 230px;
+  max-width: 300px;
   height: auto;
 }
 
@@ -103,7 +109,7 @@ body{
   padding: 5px;
 }
 #stickyHeader div a:hover, #catDropdown:hover, i[class*='fa-']:hover, #catDropdownLan a:hover{
-  color: darkred !important;
+  color: var(--c2) !important;
 }
 #stickyHeader div{
   flex-grow: 1;
@@ -199,7 +205,7 @@ body{
    height: 450px;
 }
 .activeBut{
-   background-color: darkred;
+   background-color: var(--c2);
 }
 @media screen and (max-width: 530px){
    .b img{
@@ -228,8 +234,7 @@ body{
 }
 #catalogTitle h1{
    text-align: center;
-   font-size: 300%;
-   font-family: Audiowide, Karla, sans-serif; 
+   font: 300% var(--fontTitle) !important; 
 }
 #catalogTitle hr{
    width: 50%;
@@ -242,7 +247,7 @@ body{
       font-size: 200%;
    }
 }
-@media screen and (max-width: 597px){
+@media screen and (max-width: 705px){
    #catalogTitle{
       grid-template-columns: auto;
    }
@@ -278,7 +283,7 @@ body{
    color: black
 }
 .catImg a span{
-   font: bold 20px "Times New Roman", serif;
+   font-size: 20px;
 }
 .catImg a img{
    width: 100%;
@@ -303,7 +308,7 @@ body{
    border-radius: 2rem;
    margin: 35px 0 30px;
    width: 100%;
-   font: italic bold 40px Karla, sans-serif;
+   font: italic bold 40px var(--fontN);
    cursor: pointer;
    border: 3px outset black;
    transition: color .25s, border-color .25s;
@@ -338,12 +343,12 @@ body{
   font-size: 24px;
 }
 .activePage{
-  background: lightcoral;
+  background: var(--c1);
 }
 /* select all links */
 .pagination a:hover:not(.activePage){
   background: lightgray;
-  color: darkred;
+  color: var(--c2);
 }
 @media screen and (max-width: 265px){
   .pagination a{
@@ -363,7 +368,7 @@ footer{
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
-   font: 20px sans-serif;
+   font-size: 20px;
  }
  #footInfo div{
    font-weight: bold;
@@ -395,7 +400,7 @@ footer{
    color: black;
  }
  #footInfo tr:hover, #footInfo a:hover{
-   color: darkred;
+   color: var(--c2);
    cursor: pointer;
  }
  #loc span{

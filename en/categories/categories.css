@@ -3,7 +3,14 @@ h2{
   margin-top: 0;
   text-align: center;
 }
+:root{
+  --c1: #2AB4C7;
+  --c2: rgb(0, 17, 253);
+  --fontTitle: Roboto, sans-serif;
+  --fontN: Helvetica, sans-serif;
+}
 
+/* other */
 .catImg{
   height: 330px;
 }
@@ -28,7 +35,10 @@ h2{
   text-align: left;
 }
 .catImg .left{
-  font: bold 18px "Times New Roman", serif;
+  font: 18px var(--fontN);
+}
+span ~ div#catDropdown-content a:hover{
+  color: var(--c2)
 }
 /*----------- buy button -----------*/ 
 span ~ div#catDropdown-content{
@@ -49,18 +59,18 @@ span ~ div#catDropdown-content a{
   display: block;
   width: 100%;
   padding: 8px 12px;
-  font: bold 16px 'courier New', Courier, monospace;
+  font: bold 16px "Times New Roman", serif;
   border-radius: 5px;
   cursor: pointer;
   border: 2px outset black !important;
 }
 .buy span:hover{
-  color: darkred;
-  border-color: darkred !important;
+  color: var(--c2);
+  border-color: var(--c2) !important;
 }
 @media screen and (max-width: 350px){
   .buy span{
-    font: bold 13px serif;
+    font-size: 13px;
   }
 }
 /*----------- buy button end -----------*/ 
