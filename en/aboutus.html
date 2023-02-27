@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="about lines group"/>
+
+   <title>About Lines Group</title>
+   <!-- link to home css file -->
+   <link rel="stylesheet" href="./home.css"/>
+
+   <!-- import google font -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+   <!-- import icons library -->
+   <script src="https://kit.fontawesome.com/f1d9d2165a.js" crossorigin="anonymous"></script>
+
+   <!-- special styling for this page -->
+   <style>
+      #describe{
+         display: grid;
+         grid-template-columns: 68% 30%;
+         justify-content: space-evenly;
+      }
+      #mainSection #catalogTitle ~ h2{
+         text-align: center;
+         margin-top: 0;
+      }
+      #catalogTitle{
+         margin-top: 20px !important;
+      }
+      #catalogTitle h1{
+         margin: 0;
+         font-size: 60px;
+      }
+      .intro p span{
+         font-size: 40px;
+         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+      /*----- lebanese styled spans -----*/
+      .intro p span:first-child, .intro p span:last-child{
+         color: red;
+      }
+      .intro p span:nth-child(3), .intro p span:nth-last-child(3){
+         
+         color: white;
+      }
+      .intro p span:nth-child(6){
+         color: green;
+      }
+      .intro p{
+         margin: 0 2%;
+         font: 20px "Times New Roman", serif;
+         padding: 2%;
+         border-radius: 0 1.5rem;
+         height: 100%;
+         border: 3px ridge gray;
+         margin-top: 0; 
+      }
+      .intro p a{
+         text-decoration: underline wavy green;
+         color: red;
+         font-weight: bold;
+      }
+      .catImg{ height: fit-content; }
+      .catImg{
+         width: 75%;
+         height: fit-content;
+         margin: auto;
+      }
+      .catImg:nth-child(1){ margin-bottom: 25px; }
+      .sidePics{
+         display: grid;
+         align-items: space-between;
+      }
+      @media screen and (max-width: 800px){
+         #describe{
+            display: grid;
+            grid-template-columns:auto;
+         }
+         .catImg:nth-child(1){ margin-top: 25px; }
+      }
+      @media screen and (max-width: 736px){
+         #catalogTitle h1{
+            font-size: 50px !important;
+         }
+      }
+      @media screen and (max-width: 616px){
+         #catalogTitle h1{
+            font-size: 40px !important;
+         }
+      }
+      @media screen and (max-width: 400px){
+         #catalogTitle ~ h2{
+            font-size: 18px !important;
+         }
+         .intro p{
+            font-size: 1rem;
+         }
+      }
+   </style>
+</head>
+<body onload="loading()">
+   <!-- upper header -->
+   <header id="miniHeader"></header>
+
+   <!-- this is the sticky header -->
+   <header id="stickyHeader" class="aboutus"></header>
+
+   <!-- main content -->
+   <div id="mainSection">
+      <section id="catalogTitle">
+         <hr/>
+         <h1>ABOUT US</h1>
+         <hr/>
+      </section>
+      <h2>
+         Bride accessories for weddings
+      </h2>
+      <div id="describe">
+         <article class="intro">
+            <p>
+               <span>W</span>elcome to Lines C. Couture Boutique brand, the home of exquisite & the new world of royal luxury of bridal & special occasion Crowns, Tiaras, Headpieces & Jewelry.<br/>
+
+               <span>W</span>e are based in one of the most romantic places in the world, the beautifully sunny & snowy <a href="https://en.wikipedia.org/wiki/Lebanon">Lebanon</a>.<br/>
+
+               <span>O</span>ur collections are crafted with your needs in mind. Looking for glitz and royal glamor, statement pieces or simple elegance? look no more! "Lines C. Couture" Boutique presents to you amazing collections bringing your vision into life!<br/>
+
+               <span>W</span>e use only the finest materials and expert craftsmanship to create lasting quality for your special day that will be treasured for a lifetime.<br/>
+               
+               <span>O</span>ur headpieces are designed with style, quality, and attention to detail in mind, for discerning clients who demand only the best.
+            </p>
+         </article>
+         
+         <article class="sidePics">
+            <article class="catImg">
+               <a href="../categories/crowns/crowns.html">
+                  <img src="../media/images/crown1.jpg"/>
+               </a>
+            </article>
+
+            <article class="catImg">
+               <a href="../categories/glasses/toastglass.html">
+                  <img src="../media/images/glass1.jpg"/>
+               </a>
+            </article>
+         </article>
+      </div>
+   </div>
+
+   <footer></footer>
+   <script src="home.js"></script>
+</body>
+</html>

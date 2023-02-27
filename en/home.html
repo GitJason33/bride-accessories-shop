@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- metadata for website & search engines -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="keyword"
+      content="bride, bride accessories, wedding, crown, bracelet, headpiece, flower, headband, headcomb"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="bride accessories" />
+
+    <title>Lines Group</title>
+
+    <!-- file links -->
+    <link rel="stylesheet" href="./home.css" />
+
+    <!-- import google font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+
+    <!-- import icons library -->
+    <script
+      src="https://kit.fontawesome.com/f1d9d2165a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="loadHome();">
+    <!-- upper header -->
+    <header id="miniHeader"></header>
+
+    <!-- this is the navigation bar -->
+    <header id="stickyHeader" class="home"></header>
+
+    <!-- decor video -->
+    <video class="vid" loop controls></video>
+
+    <!-- image slider -->
+    <div class="b">
+      <img id="slider" src="../media/images/crown1.jpg"/><br/>
+      <div>
+        <button class="sliderButtons activeBut" 
+                onclick="change(this)" value="0"></button>
+        <button class="sliderButtons" onclick="change(this)" value="1"></button>
+        <button class="sliderButtons" onclick="change(this)" value="2"></button>
+        <button class="sliderButtons" onclick="change(this)" value="3"></button>
+        <button class="sliderButtons" onclick="change(this)" value="4"></button>
+        <button class="sliderButtons" onclick="change(this)" value="5"></button>
+      </div>
+    </div>
+
+    <!-- main content -->
+    <div id="mainContent">
+      <section id="catalogTitle">
+        <hr />
+        <h1>Product Catalog</h1>
+        <hr />
+      </section>
+      <section class="proCatalog"></section>
+    </div>
+
+    <button id="checkPay" onclick="window.open('./paypal.html');">
+      Pay With PayPal
+    </button>
+
+    <footer></footer>
+    <script src="home.js"></script>
+  </body>
+</html>
