@@ -44,7 +44,10 @@ const links_v1 = [ // home version
   "./categories/rita-menu/rita.html",
 
   // language
-  "../ar/home.html"
+  "../ar/home.html",
+
+  // paypal
+  "./paypal.html"
 ];
 
 const links_v2 = [ // categories version
@@ -72,7 +75,10 @@ const links_v2 = [ // categories version
   "../rita-menu/rita.html",
 
   // language
-  "../../../ar/home.html"
+  "../../../ar/home.html",
+
+  // paypal
+  "../../paypal.html"
 ];
 
 // elements for adding content
@@ -110,10 +116,6 @@ const ritaLoad = ()=> {
   createCatalog(labels, link, images);
 }
 
-const libraries = [
-  // font awesome icon library
-  
-];
 const addFontAwesome = ()=> {
   let head = document.head;
   let script = document.createElement("script");
@@ -148,7 +150,7 @@ function createNavBar() {
   // category builder 
   let catInner = "";
   for(let i1 = 6, i2 = 0; i2 < catLabels.length; i1++, i2++){
-    if(i1 == 12) i1 = links.length-2;
+    if(i1 == 12) i1 = links.length-3;
     catInner += "<a href='" + links[i1] + "'>" + catLabels[i2] + "</a>"
   }
   
@@ -181,13 +183,18 @@ function createNavBar() {
 function createFooter() {
   const footer = document.querySelector("footer");
   let links = checkLink();
-  let inner =
-  '<div id="footImg">\
-    <img src="'+ links[0]+'" alt="lines group logo"/>\
-  </div>\
-  <div id="footInfo">\
+  let linkToPay = "window.open('" + links[links.length - 1] + "');";
+  let image = checkImage(links);
+
+  let inner = 
+  '<div id="footGeneral">\
     <div id="loc">Founded in <span>Lebanon</span></div>\
     <div>all rights reserved &copy;</div>\
+    <section id="checkPay" onclick="' + linkToPay +'">\
+      <img src="' + image + '" alt="paypal-logo" />\
+    </section>\
+  </div>\
+  <div id="footInfo">\
     <table>\
       <tr>\
         <td><i class="fa-brands fa-instagram"></i></td>\
@@ -208,6 +215,13 @@ function createFooter() {
     </table>\
   </div>';
   footer.innerHTML = inner;
+}
+
+// check paypal image thru liks array
+function checkImage(link){
+  return link == links_v1 ? 
+    "../media/images/paypal-logo.png" 
+  : "../../../media/images/paypal-logo.png";
 }
 
 // checks for active page

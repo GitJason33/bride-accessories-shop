@@ -303,25 +303,17 @@ body{
 
 /*------- paypal button -------*/
 #checkPay{
-   display: block;
-   border-radius: 2rem;
-   margin: 35px 0 30px;
-   width: 100%;
-   font: italic bold 40px var(--fontN);
+   width: 150px;
+   height: auto;
    cursor: pointer;
-   border: 3px outset black;
-   transition: color .25s, border-color .25s;
-   background: lightgray;
-
+   transition: 250ms;
 }
 #checkPay:hover{
-   color: darkblue;
-   border-color: darkblue;
+   filter: brightness(90%);
 }
-@media screen and (max-width: 455px){
-   #checkPay{
-      font-size: 25px;
-   }
+#checkPay img{
+   width: 100%;
+   height: 100%;
 }
 /*------- paypal button End -------*/
 
@@ -369,9 +361,6 @@ footer{
    flex-wrap: wrap;
    font-size: 20px;
  }
- #footInfo div{
-   font-weight: bold;
-}
  @media screen and (max-width: 499px){
    footer{
      justify-content: center;
@@ -386,13 +375,6 @@ footer{
    footer{
      font-size: 13px;
    }
-   #footImg img{
-     max-width: 100% !important;
-   }
- }
- #footImg img{
-   max-width: 230px;
-   height: auto;
  }
  #footInfo a{
    text-decoration: none;
@@ -405,9 +387,6 @@ footer{
  #loc span{
    color: red;
    text-decoration: underline green;
- }
- #footInfo table{
-   padding: 20px 0 0;
  }
 /*------- Footer End-------*/
 
