@@ -4,8 +4,8 @@ h2{
   text-align: center;
 }
 :root{
-  --c1: #46dff3;
-  --c2: rgb(0, 17, 253);
+  --c1: #00bcc0; 
+  --c2: #0f656b;
   --fontTitle: Roboto, sans-serif;
   --fontN: Helvetica, sans-serif;
 }
