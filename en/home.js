@@ -188,7 +188,8 @@ function createFooter() {
 
   let inner = 
   '<div id="footGeneral">\
-    <div id="loc">Founded in <a href="https://en.wikipedia.org/wiki/Lebanon">Lebanon</a></div>\
+    <div id="loc">Founded in \
+    <a href="https://en.wikipedia.org/wiki/Lebanon">Lebanon</a></div>\
     <div>all rights reserved &copy;</div>\
     <section id="checkPay" onclick="' + linkToPay +'">\
       <img src="' + image + '" alt="paypal-logo" />\
