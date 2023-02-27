@@ -383,7 +383,7 @@ const createCatalogTitles = function() {
     },
     {
       prop: "rita_crown",
-      val: "Rita Crowns"
+      val: "Rita Tiaras"
     },
     {
       prop: "rita_comb",

@@ -638,6 +638,41 @@ const flowers = [
     description: "White red silk diamond",
     code: "Code: FBY0394",
   },
+  { // 3.4
+    source: "flower 26.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu001",
+  },
+  { // 3.5
+    source: "flower 27.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu002",
+  },
+  { // 3.6
+    source: "flower 28.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu003",
+  },
+  { // 3.7
+    source: "flower 29.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu004",
+  },
+  { // 3.8
+    source: "flower 30.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu005",
+  },
+  { // 3.9
+    source: "flower 31.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu006",
+  },
+  { // 4.1
+    source: "flower 32.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu007",
+  },
 ];
 
 // for glasses
@@ -1214,7 +1249,8 @@ const pgBracelet = [
 const pgFlower = [
   "flowers.html",
   "flowers2.html",
-  "flowers3.html"
+  "flowers3.html",
+  "flowers4.html"
 ];
 const pgHeadband = [
   "headbands.html",
