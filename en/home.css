@@ -1,12 +1,11 @@
 /* fix any code breaking margins and paddings */
 *{ box-sizing: border-box; }
 :root{
-   --c1: #46dff3;
-   --c2: rgb(0, 17, 253);
+   --c1: #00bcc0; /*  & #00a6a7*/
+   --c2: #0f656b;
    --fontTitle: Roboto, sans-serif;
    --fontN: Helvetica, sans-serif;
 }
-
 /*------------- video -------------*/
 video{
    max-width: 100%;
@@ -204,7 +203,7 @@ body{
    height: 450px;
 }
 .activeBut{
-   background-color: var(--c2);
+   background-color: var(--c1);
 }
 @media screen and (max-width: 530px){
    .b img{
@@ -339,7 +338,6 @@ body{
 /* select all links */
 .pagination a:hover:not(.activePage){
   background: lightgray;
-  color: var(--c2);
 }
 @media screen and (max-width: 265px){
   .pagination a{
@@ -361,9 +359,9 @@ footer{
    flex-wrap: wrap;
    font-size: 20px;
  }
- @media screen and (max-width: 499px){
+ @media screen and (max-width: 500px){
    footer{
-     justify-content: center;
+     flex-direction: column;
    }
  }
  @media screen and (max-width: 302px){

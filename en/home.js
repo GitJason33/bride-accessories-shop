@@ -96,8 +96,8 @@ const loading = ()=> {
 const loadHome = ()=> {
   loading();
   automateSlider();
-  createVideo("../media/videos/vid-decor.mp4");
   createCatalog(catalogLabels, links_v1, homeImages);
+  createVideo("../media/videos/vid-decor.mp4");
 }
 const ritaLoad = ()=> {
   loading();
