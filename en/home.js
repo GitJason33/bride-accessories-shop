@@ -221,8 +221,8 @@ function createFooter() {
 // check paypal image thru liks array
 function checkImage(link){
   return link == links_v1 ? 
-    "../media/images/paypal-logo.png" 
-  : "../../../media/images/paypal-logo.png";
+    "../media/images/Paypal-logo.png" 
+  : "../../../media/images/Paypal-logo.png";
 }
 
 // checks for active page
