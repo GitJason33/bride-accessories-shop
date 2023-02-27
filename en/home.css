@@ -1,7 +1,7 @@
 /* fix any code breaking margins and paddings */
 *{ box-sizing: border-box; }
 :root{
-   --c1: #2AB4C7;
+   --c1: #46dff3;
    --c2: rgb(0, 17, 253);
    --fontTitle: Roboto, sans-serif;
    --fontN: Helvetica, sans-serif;
@@ -15,7 +15,6 @@ video{
    margin: 0 auto 20px;
 
 }
-
 /*------------- video end -------------*/
 
 .active{
