@@ -384,9 +384,12 @@ footer{
    color: var(--c2);
    cursor: pointer;
  }
- #loc span{
-   color: red;
-   text-decoration: underline green;
+ #loc a{
+   text-decoration: none;
+   color: black;
+ }
+ #loc a:hover{
+   color: var(--c2);
  }
 /*------- Footer End-------*/
 
