@@ -81,8 +81,8 @@ const crowns = [
   // 9 - 17
   { // 2.1
     source: "crown 13.jpg",
-    description: "Platinum Plated",
-    code: ""
+    description: "Zircon platinum plated",
+    code: "Code: 146"
   },
   { // 2.2
     source: "crown 14.jpg",
@@ -112,7 +112,7 @@ const crowns = [
   { // 2.7
     source: "crown 24.jpg",
     description: "Platinum Plated Zircon",
-    code: ""
+    code: "Code: 23"
   },
   { // 2.8
     source: "crown 25.jpg",
@@ -133,12 +133,12 @@ const crowns = [
   { // 3.2
     source: "crown 28.jpg",
     description: "24K Gold Plated",
-    code: ""
+    code: "Code: 191#"
   },
   { // 3.3
     source: "crown 29.jpg",
     description: "Platinum Plated Crown",
-    code: ""
+    code: "Code: 136"
   },
   { // 3.4
     source: "crown 30.jpg",
@@ -163,7 +163,7 @@ const crowns = [
   { // 3.8
     source: "crown 33.jpg",
     description: "Platinum Plated Crown",
-    code: ""
+    code: "Code: 191#"
   },
   { // 3.9
     source: "crown 35.jpg",
@@ -214,7 +214,7 @@ const headbands = [
   { // 1.5
     source: "headband 5.jpg",
     description: "Cubic Zirconia gold silver plated",
-    code: "",
+    code: "Code: 228",
   },
   { // 1.6
     source: "headband 6.jpg",
@@ -229,7 +229,7 @@ const headbands = [
   { // 1.8
     source: "headband 8.jpg",
     description: "Flower-Pearl-crystal",
-    code: "",
+    code: "Code: HP467",
   },
   { // 1.9
     source: "headband 9.jpg",
@@ -300,8 +300,8 @@ const headbands = [
   },
   { // 3.4
     source: "headband 22.jpg",
-    description: "Headband",
-    code: "",
+    description: "Flower pearl Crystal",
+    code: "Code: HP357",
   },
   { // 3.5
     source: "headband 23.jpg",
@@ -442,7 +442,7 @@ const haircombs = [
   { // 1.9
     source: "comb 9.jpg",
     description: "Crystal Pearl Ornaments",
-    code: "",
+    code: "Code: HP268",
   },
   // 9 - 17
   { // 2.1
