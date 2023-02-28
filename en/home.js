@@ -95,6 +95,7 @@ const loading = ()=> {
 }
 const loadHome = ()=> {
   loading();
+  addSliderSrc();
   automateSlider();
   createCatalog(catalogLabels, links_v1, homeImages);
   createVideo("../media/videos/vid-decor.mp4");
@@ -184,7 +185,7 @@ function createFooter() {
   const footer = document.querySelector("footer");
   let links = checkLink();
   let linkToPay = "window.open('" + links[links.length - 1] + "');";
-  let image = checkImage(links);
+  let image = checkPaypal(links);
 
   let inner = 
   '<div id="footGeneral">\
@@ -219,7 +220,7 @@ function createFooter() {
 }
 
 // check paypal image thru liks array
-function checkImage(link){
+function checkPaypal(link){
   return link == links_v1 ? 
     "../media/images/Paypal-logo.png" 
   : "../../../media/images/Paypal-logo.png";
@@ -295,6 +296,12 @@ function change(ref) {
     }
   }
   slider.src = "../media/images/" + homeImages[compteur];
+}
+
+// generate the image slider
+function addSliderSrc(){
+  let img = document.querySelector("#slider");
+  img.src = "../media/images/crown1.jpg";
 }
 
 // this is an automater for the slider

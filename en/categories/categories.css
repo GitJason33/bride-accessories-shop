@@ -14,17 +14,17 @@ h2{
 .catImg{
   height: 330px;
 }
-@media screen and (max-width: 759px){
-  .catImg{
-    height: fit-content;
+.catImg a img{
+  height: 240px;
+}
+@media screen and (max-width: 734px){
+  .catImg, .catImg a img{
+    height: auto;
   }
 }
 .containInfo{
   display: grid;
   grid-template-columns: auto 30%;
-}
-.catImg img{
-  height: 240px !important;
 }
 .catImg img:hover{
   transform: none !important;
@@ -38,7 +38,12 @@ h2{
   font: 18px var(--fontN);
 }
 span ~ div#catDropdown-content a:hover{
-  color: var(--c2)
+  color: var(--c2);
+}
+@media screen and (max-width: 400px){
+  .catImg .left{
+    font-size: 15px;
+  }
 }
 /*----------- buy button -----------*/ 
 span ~ div#catDropdown-content{
@@ -70,7 +75,13 @@ span ~ div#catDropdown-content a{
 }
 @media screen and (max-width: 350px){
   .buy span{
+    border-width: 1px !important;
     font-size: 13px;
+  }
+}
+@media screen and (max-width: 290px){
+  .buy span{
+    font-size: 10px;
   }
 }
 /*----------- buy button end -----------*/ 

@@ -41,7 +41,7 @@
       .intro p{
          margin: 0 2%;
          font: 20px "Times New Roman", serif;
-         padding: 2%;
+         padding: 12px;
          border-radius: 0 1.5rem;
          height: 100%;
          border: 3px ridge gray;
@@ -54,7 +54,7 @@
       }
       .catImg{ height: fit-content; }
       .catImg{
-         width: 75%;
+         width: 90%;
          height: fit-content;
          margin: auto;
       }
@@ -63,12 +63,30 @@
          display: grid;
          align-items: space-between;
       }
-      @media screen and (max-width: 800px){
+      @media screen and (max-width: 600px){
          #describe{
             display: grid;
             grid-template-columns:auto;
          }
          .catImg:nth-child(1){ margin-top: 25px; }
+         .catImg{
+            width: 100%;
+         }
+      }
+      @media screen and (max-width: 941px){
+         #describe{
+            display: grid;
+            grid-template-columns:auto;
+         }
+         .catImg:nth-child(1){ margin-top: 25px; }
+         .catImg{
+            width: 75%;
+         }
+      }
+      @media screen and (max-width: 650px){
+         .catImg{
+            width: 100%;
+         }
       }
       @media screen and (max-width: 736px){
          #catalogTitle h1{
@@ -112,11 +130,11 @@
       <div id="describe">
          <article class="intro">
             <p>
-               <span>W</span>elcome to Lines group brand, the home of exquisite & the new world of royal luxury of bridal & special occasion Crowns, Tiaras, Headpieces & Jewelry.<br/>
+               <span>W</span>elcome to Lines Group brand, the home of exquisite & the new world of royal luxury of bridal & special occasion Crowns, Tiaras, Headpieces & Jewelry.<br/>
 
                <span>W</span>e are based in <a href="https://en.wikipedia.org/wiki/Lebanon">Lebanon</a>.<br/>
 
-               <span>O</span>ur collections are crafted with your needs in mind. Looking for glitz and royal glamor, statement pieces or simple elegance? look no more! "Lines C. Couture" Boutique presents to you amazing collections bringing your vision into life!<br/>
+               <span>O</span>ur collections are crafted with your needs in mind. Looking for glitz and royal glamor, statement pieces or simple elegance? look no more! Lines Group presents to you amazing collections bringing your vision into life!<br/>
 
                <span>W</span>e use only the finest materials and expert craftsmanship to create lasting quality for your special day that will be treasured for a lifetime.<br/>
                
@@ -126,13 +144,13 @@
          
          <article class="sidePics">
             <article class="catImg">
-               <a href="../categories/crowns/crowns.html">
+               <a href="./categories/crowns/crowns.html">
                   <img src="../media/images/crown1.jpg"/>
                </a>
             </article>
 
             <article class="catImg">
-               <a href="../categories/glasses/toastglass.html">
+               <a href="./categories/glasses/toastglass.html">
                   <img src="../media/images/glass1.jpg"/>
                </a>
             </article>

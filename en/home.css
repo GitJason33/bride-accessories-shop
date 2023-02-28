@@ -199,24 +199,26 @@ body{
    margin: auto;
 }
 .b img{
-   width: 500px;
-   height: 450px;
+   max-width: 800px;
+   height: auto;
 }
 .activeBut{
    background-color: var(--c1);
 }
-@media screen and (max-width: 530px){
+@media screen and (max-width: 830px){
    .b img{
-      width: 95%;
+      width: 99%;
       height: auto;
       display: block;
       margin: auto;
    }
+}
+@media screen and (max-width: 457px){
    .sliderButtons{
       width: 35px;
    }
 }
-@media screen and (max-width: 273px){
+@media screen and (max-width: 320px){
    .sliderButtons{
       width: 30px;
    }
@@ -232,7 +234,7 @@ body{
 }
 #catalogTitle h1{
    text-align: center;
-   font: 300% var(--fontTitle) !important; 
+   font: 300% var(--fontTitle); 
 }
 #catalogTitle hr{
    width: 50%;
@@ -240,11 +242,11 @@ body{
    background: black;
    border-radius: 1rem;
 }
-@media screen and (max-width: 890px){
+/* @media screen and (max-width: 890px){
    #catalogTitle h1{
       font-size: 200%;
    }
-}
+} */
 @media screen and (max-width: 705px){
    #catalogTitle{
       grid-template-columns: auto;
@@ -253,7 +255,12 @@ body{
       display: none;
    }
 }
-@media screen and (max-width: 328px){
+@media screen and (max-width: 400px){
+   #catalogTitle h1{
+      font-size: 250%;
+   }
+}
+@media screen and (max-width: 352px){
    #catalogTitle h1{
       font-size: 170%;
    }
@@ -268,8 +275,8 @@ body{
    max-width: 100%;
 }
 .catImg{
-   width: 300px;
-   height: 300px;
+   width: 330px;
+   height: 330px;
    transition: transform 500ms;
    padding: 10px;
    margin: 15px;
@@ -291,11 +298,15 @@ body{
 .catImg img:hover{
    transform: rotate(-10deg);
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 734px){
    .catImg{
-      max-width: 100%;
+      width: 70%;
       height: auto;
-      margin: 15px auto;
+   }
+}
+@media screen and (max-width: 500px){
+   .catImg{
+      width: 100%;
    }
 }
 /*------- Product Catalog End -------*/
