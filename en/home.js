@@ -83,8 +83,9 @@ const links_v2 = [ // categories version
 
 // elements for adding content
 const header = document.querySelector("#stickyHeader");
+let vidsContainer = document.querySelector("#videos");
 
-// loading function
+// loading function - essential in every load function
 const loading = ()=> {
   createHeader();
   createNavBar();
@@ -100,6 +101,16 @@ const loadHome = ()=> {
   createCatalog(catalogLabels, links_v1, homeImages);
   createVideo("../media/videos/vid-decor.mp4");
 }
+const loadDecor = ()=> {
+  loading();
+  let vids = [
+    "vid-decor2.mp4",
+    "vid-decor.mp4",
+  ];
+  for(let i in vids){
+    createVideo("../media/videos/" + vids[i]);
+  }
+};
 const ritaLoad = ()=> {
   loading();
   let images = [
@@ -117,12 +128,32 @@ const ritaLoad = ()=> {
   createCatalog(labels, link, images);
 }
 
+// import icons library font awesome
 const addFontAwesome = ()=> {
   let head = document.head;
   let script = document.createElement("script");
   script.src = "https://kit.fontawesome.com/f1d9d2165a.js";
   script.crossOrigin = "Anonymous";
   head.append(script);
+}
+
+// generate a video
+const createVideo = (source)=> {
+  let video = document.createElement("video");
+  video.className = "vid";
+  video.src = source;
+  video.loop = "true";
+  video.controls = "true";
+
+  // only first video autoplays
+  if(vidsContainer.innerHTML == '')
+  video.autoplay = "true";
+
+  // error message
+  video.innerHTML = "Sorry, your browser doesn't support video players";
+
+  // add the video to the container
+  vidsContainer.appendChild(video);
 }
 
 // create the upper header
@@ -219,7 +250,7 @@ function createFooter() {
   footer.innerHTML = inner;
 }
 
-// check paypal image thru liks array
+// check paypal image thru links array
 function checkPaypal(link){
   return link == links_v1 ? 
     "../media/images/Paypal-logo.png" 
@@ -266,11 +297,6 @@ function checkLink() {
   // } 
 }
 
-// generate video
-const createVideo = (source)=> {
-  let video = document.querySelector(".vid");
-  video.src = source;
-}
 
 // image slider buttons
 const slider = document.querySelector("#slider");
@@ -298,7 +324,7 @@ function change(ref) {
   slider.src = "../media/images/" + homeImages[compteur];
 }
 
-// generate the image slider
+// generate the first image of the slider (fix for long loading time)
 function addSliderSrc(){
   let img = document.querySelector("#slider");
   img.src = "../media/images/crown1.jpg";

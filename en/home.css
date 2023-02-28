@@ -7,12 +7,20 @@
    --fontN: Helvetica, sans-serif;
 }
 /*------------- video -------------*/
-video{
-   max-width: 100%;
+#videos {
+   width: fit-content; 
+   margin: auto;
+}
+.vid{
+   width: 90%;
    height: auto;
    display: block;
    margin: 0 auto 20px;
-
+}
+@media screen and (max-width: 992px){
+   .vid{
+      width: 100%;
+   }
 }
 /*------------- video end -------------*/
 
