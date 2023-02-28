@@ -624,9 +624,9 @@ const flowers = [
   },
   // 18 -> 21
   { // 3.1
-    source: "flower 23.jpg",
-    description: "Silver Bouquets",
-    code: "Code: PTY0266-5",
+    source: "flower 32.jpeg",
+    description: "Flower handpieces",
+    code: "Code: Tu007",
   },
   { // 3.2
     source: "flower 24.jpg",
@@ -668,10 +668,11 @@ const flowers = [
     description: "Flower handpieces",
     code: "Code: Tu006",
   },
+  
   { // 4.1
-    source: "flower 32.jpeg",
-    description: "Flower handpieces",
-    code: "Code: Tu007",
+    source: "flower 23.jpg",
+    description: "Silver Bouquets",
+    code: "Code: PTY0266-5",
   },
 ];
 
